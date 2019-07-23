@@ -1,7 +1,0 @@
-{
-  "name": "AllthatAttend",
-  "integrations": {
-    "cordova": {}
-  },
-  "type": "angular"
-}
