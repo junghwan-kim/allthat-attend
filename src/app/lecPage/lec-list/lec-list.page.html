@@ -1,0 +1,66 @@
+
+<ion-header>
+  <ion-toolbar class="new-background-color">
+      <ion-title class="ion-title_class">강사 출결 시스템</ion-title>
+      <a (click)="logoutUser()" class="fxtOut">로그아웃</a>  
+     
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div id="wrap" class="listWrap">
+      <!--div id="fixTop">
+        <h2>강사 출결 시스템</h2>
+        <a (click)="logoutUser()" class="fxtOut">로그아웃</a>
+      </div-->
+    <div class="listTop">
+      <h3><span>{{LoginUser.EmployeeName}}</span>님 반갑습니다.{{error_message}}</h3>
+      <div class="lsttSch">
+        <ion-select [(ngModel)]="selLecDate" (ionChange)="searchChanged($event)" okText="확인" cancelText="아니오">
+          <ion-select-option *ngFor="let item of selectOption" [value]="item.LectureDate">{{item.LectureDate}}</ion-select-option>
+        </ion-select>
+        <!--select [(ngModel)]="selLecDate" (ionChange)="searchChanged($event)" id="selLecDate">
+            <option *ngFor="let item of selectOption" [value]="item.LectureDate">{{item.LectureDate}}</option>
+        </select-->
+      </div>
+    </div>
+
+    <dl class="listDesc">
+      <dt>N : </dt><dd>신규</dd>
+      <dt>A : </dt><dd>수강</dd>
+      <dt>B : </dt><dd>복학</dd>
+      <dt>T : </dt><dd>시험</dd>
+      <dt>W : </dt><dd>대기</dd>
+    </dl>
+
+    <div class="listSlider" id="lecList">
+
+      <div class="listCont" *ngFor="let item of results">
+          <div>
+            <h4>{{item.ShortName}}</h4>
+            <h5>{{item.RoomName}}</h5>
+            <dl>
+              <dt>강의시간 : </dt>
+              <dd>{{item.StartTime}} ~ {{item.EndTime}} </dd>
+            </dl>
+            <dl>
+              <dt>강의정원 : </dt>
+              <dd>{{item.NormalSeat}}</dd>
+            </dl>
+            <ul>
+              <li>N : {{item.N_CNT}}</li>
+              <li>A : {{item.A_CNT}}</li>
+              <li>B : {{item.B_CNT}}</li>
+              <li>T : {{item.T_CNT}}</li>
+              <li>W : {{item.W_CNT}}</li>
+            </ul>
+            <div class="listBtn">
+                <a routerLink="/lec-detail/{{SiteCode}}/{{item.RoomTimeSeq}}/{{item.LectureDate}}" routerDirection="forward">출석 & 수강정보 보기</a>
+            </div>
+          </div>
+        </div>
+
+    </div>
+  </div>
+
+</ion-content>
