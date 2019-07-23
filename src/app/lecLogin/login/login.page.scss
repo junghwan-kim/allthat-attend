@@ -1,0 +1,40 @@
+
+#login {width:100%; max-width:750px; overflow:hidden; margin:0 auto; position:relative; padding:20px 15px;}
+.lgnLogo {display:block; height:20px; width:100px; text-indent:-9999px; background:url('http://lec.koreagroupware.com/img/intro_logo.png')no-repeat left top; background-size:auto 100%;}
+.lgnTitle {margin-top:40px;}
+.lgnTitle h3 {font-size:24pt; line-height:1.25em; font-weight:100; letter-spacing:-0.075em;}
+.lgnTitle h3 span {font-weight:400;}
+.lgnTitle p {font-size:11pt; color:#666; margin-top:5px; font-weight:300;}
+
+.lgnForm {margin-top:40px;}
+.lgnForm li {position:relative; margin-bottom:15px;}
+.lgnForm li span {
+	display:block; position:absolute; left:0; bottom:0; height:1px; transition: all .4s ease;
+	background: #02aab0; /* Old browsers */
+	background: -moz-linear-gradient(left,  #02aab0 0%, #00cdac 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(left,  #02aab0 0%,#00cdac 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to right,  #02aab0 0%,#00cdac 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#02aab0', endColorstr='#00cdac',GradientType=1 ); /* IE6-9 */
+}
+.lgnForm li input[type="text"],
+.lgnForm li input[type="password"] {display:block; border:none; border-bottom:solid 1px #ddd; padding:0; font-size:15pt; font-weight:300;width:100%;}
+.lgnForm li input[type="text"]:focus ~ span,
+.lgnForm li input[type="password"]:focus ~ span {width:100%;}
+
+
+.lgnForm li input::placeholder {color:#999; font-size:11pt;}
+.lgnForm li input:-ms-input-placeholder {color:#999; font-size:11pt;}
+.lgnForm li input::-ms-input-placeholder {color:#999; font-size:11pt;}
+
+.lngBtn {margin-top:30px;}
+.lngBtn .lngLoginBtn {
+	display:block; width:100%;text-align:center; background:#333; height:50px; line-height:50px; font-size:12pt; color:#fff;
+	border-radius: 4px 4px 4px 4px; -moz-border-radius: 4px 4px 4px 4px; -webkit-border-radius: 4px 4px 4px 4px;
+	background: #02aab0; /* Old browsers */
+	background: -moz-linear-gradient(left,  #02aab0 0%, #00cdac 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(left,  #02aab0 0%,#00cdac 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to right,  #02aab0 0%,#00cdac 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#02aab0', endColorstr='#00cdac',GradientType=1 ); /* IE6-9 */
+}
+.lgnInfo {margin-top:60px;}
+.lgnInfo dd {font-size:9pt; line-height:1.5em; letter-spacing:-0.025em;}

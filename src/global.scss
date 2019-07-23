@@ -9,3 +9,128 @@
 @import '~@ionic/angular/css/text-alignment.css';
 @import '~@ionic/angular/css/text-transformation.css';
 @import '~@ionic/angular/css/flex-utils.css';
+
+
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:100,300,400,500,700,900|Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&display=swap&subset=korean');
+
+
+/*------------------------------------------------------------------
+	00. CSS Reset
+-------------------------------------------------------------------*/
+
+::-webkit-scrollbar,
+::-webkit-scrollbar-button,
+::-webkit-scrollbar-thumb:window-inactive,
+::-webkit-scrollbar-thumb,
+::-webkit-scrollbar-track {-webkit-appearance:none; display:none;}
+
+* {margin:0; padding:0;}
+*, *::after, *::before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+html {overflow-x: hidden;}
+body {margin: 0;}
+html, body {-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; -webkit-text-size-adjust: 100%; text-rendering: optimizeLegibility; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;}
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {display: block;}
+audio, canvas, progress, video {display: inline-block; vertical-align: baseline;}
+audio:not([controls]) {display: none; height: 0;}
+[hidden], template {display: none;}
+caption {display: none;}
+a {background: transparent;}
+/* a:active, a:hover {outline: 0;} */
+abbr[title] {border-bottom: 1px dotted;}
+b, strong, th {font-weight: 500;}
+dfn {font-style: italic;}
+h1 {font-size: 2em; margin: 0.67em 0;}
+mark {background: #ff0; color: #000;}
+small {font-size: 80%;}
+sub, sup {font-size: 75%; line-height: 0; position: relative; vertical-align: baseline;}
+sup {top: -0.5em;}
+sub {bottom: -0.25em;}
+img {border: 0; max-width:100%; vertical-align: middle;}
+svg:not(:root) {overflow: hidden;}
+ol, ul, li {list-style:none}
+label, button {cursor:pointer}
+label {margin-left:5px; color:#353535; vertical-align:middle;}
+figure {margin: 1em 40px;}
+hr {-moz-box-sizing: content-box; box-sizing: content-box; height: 0;}
+pre {overflow: auto;}
+code, kbd, pre, samp {font-family: monospace, monospace; font-size: 1em;}
+button, input, optgroup, select, textarea {color: inherit; font: inherit; margin: 0; outline:none;}
+button {overflow: visible; cursor:pointer;}
+button, select {text-transform: none;}
+button, html input[type="button"], input[type="reset"], input[type="submit"] {-webkit-appearance: button; cursor: pointer;}
+button[disabled], html input[disabled] {cursor: default;}
+button::-moz-focus-inner, input::-moz-focus-inner {border: 0; padding: 0;}
+input {line-height: normal;}
+input[type="checkbox"], input[type="radio"] {box-sizing: border-box; padding: 0;}
+input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-outer-spin-button {height: auto;}
+input[type="search"] {-webkit-appearance: textfield; -moz-box-sizing: content-box; -webkit-box-sizing: content-box; box-sizing: content-box;}
+input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration {-webkit-appearance: none;}
+fieldset {border: 0; margin: 0; padding: 0;}
+legend {border: 0; padding: 0; }
+textarea {overflow: auto; resize: vertical;}
+optgroup {font-weight: bold;}
+table {border-collapse: collapse; border-spacing: 0; table-layout: fixed; word-break: break-all; width:100%;}
+
+
+
+/*------------------------------------------------------------------
+	01. Typography
+-------------------------------------------------------------------*/
+
+body {font-family:'Noto Sans KR', sans-serif, dotum, '돋움', gulim, '굴림', Arial, AppleGothic, verdana, helvetica; font-size:9pt; letter-spacing:-0.06em; line-height: 1.4; font-weight: 400; color: #969696; margin: 0; overflow-x: hidden;}
+h1, h2, h3, h4, h5, h6 {margin-top: 0; font-weight: 500; color: #353535;}
+h1 {font-size: 2.2rem;}
+h2 {font-size: 2.0rem;}
+h3 {font-size: 1.8rem;}
+h4 {font-size: 1.6rem;}
+h5 {font-size: 1.4rem;}
+h6 {font-size: 1.2rem;}
+p {margin-top: 0;}
+a {color: inherit;}
+/* a:hover {opacity: 0.95;} */
+a, a:link, a:hover, a:active, a:focus {outline: 0; text-decoration: none;}
+body, input, textarea, button, select, label, a {-webkit-tap-highlight-color: rgba(0, 0, 0, 0);}
+/* blockquote {background: #f9f9f9; padding: 20px;} */
+input, textarea, button, select, label {font-family:'Noto Sans KR', sans-serif, dotum, '돋움', gulim, '굴림', Arial, AppleGothic, verdana, helvetica;}
+/* input, textarea, select, fieldset {margin-bottom: 1.5rem;} */
+/* pre, blockquote, dl, figure, table, p, ul, ol, form {margin-bottom: 2.5rem;} */
+/* hr {margin-top: 3rem; margin-bottom: 3.5rem; border-width: 0; border-top: 1px solid #E1E1E1;} */
+
+
+
+
+.new-background-color{
+	--background: #02aab0; /* Old browsers */
+	--background: -moz-linear-gradient(left,  #02aab0 0%, #00cdac 100%); /* FF3.6-15 */
+	--background: -webkit-linear-gradient(left,  #02aab0 0%,#00cdac 100%); /* Chrome10-25,Safari5.1-6 */
+	--background: linear-gradient(to right,  #02aab0 0%,#00cdac 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#02aab0', endColorstr='#00cdac',GradientType=1 ); /* IE6-9 */
+}
+
+.ion-title_class{
+	--color:#fff;
+	text-align:center;
+}
+
+a.fxtOut,a.fxtPrev {display:block; width:54px; height:54px; text-indent:-9999px; position:absolute; top:50%; margin-top:-27px; background-size:54px auto !important;}
+a.fxtPrev {left:0; background:url('http://lec.koreagroupware.com/img/top_back.png')no-repeat}
+a.fxtOut {right:0; background:url('http://lec.koreagroupware.com/img/top_logout.png')no-repeat;}
+
+
+
+.my-toast{
+    --background:rgba(0,0,0,0.7);
+    --border-radius:1px;
+    --border-style:solid;
+    --button-color:#FFf;
+	--color:#fff;
+	--padding:10px;
+	--border-radius: 4px 4px 4px 4px; 
+	-moz-border-radius: 4px 4px 4px 4px; 
+	-webkit-border-radius: 4px 4px 4px 4px;
+
+}
